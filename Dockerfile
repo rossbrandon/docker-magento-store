@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
         libcurl3-dev \
         libxml2-dev \
         vim \
-        postfix \
     && docker-php-ext-install -j$(nproc) iconv mcrypt mbstring mysql mysqli pdo pdo_mysql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
