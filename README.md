@@ -13,12 +13,14 @@ $ docker-compose up -d
 ~~~
 
 The default `docker-compose.yml` includes the following features:
-* Debian Linux (Jessie)
+* Linux (Debian 8 Jessie)
 * Apache 2.4
 * MySQL 5.6
 * PHP 5.6 (with XDebug)
 * phpMyAdmin (Latest)
 * Redis (Latest)
+
+## Configuration
 
 Environment configurations are available in the .env file. Below is the default configuration:
 
