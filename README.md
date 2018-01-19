@@ -20,6 +20,28 @@ The default `docker-compose.yml` includes the following features:
 * phpMyAdmin (Latest)
 * Redis (Latest)
 
+## Installed Packages
+
+The following packages will be installed onto the web server:
+
+* libfreetype6-dev
+* libjpeg62-turbo-dev
+* libmcrypt-dev
+* libpng12-dev
+* libcurl3-dev
+* libxml2-dev
+* vim
+* iconv
+* mcrypt
+* mbstring
+* mysql
+* mysqli
+* pdo
+* pdo_mysql
+* gd
+* composer
+* xdebug
+
 ## Configuration
 
 Environment configurations are available in the .env file. Below is the default configuration:
