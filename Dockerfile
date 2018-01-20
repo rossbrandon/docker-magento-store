@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
         libcurl3-dev \
         libxml2-dev \
         vim \
-    && docker-php-ext-install -j$(nproc) iconv mcrypt mbstring mysql mysqli pdo pdo_mysql \
+    && docker-php-ext-install -j$(nproc) iconv mcrypt mbstring mysqli pdo_mysql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer

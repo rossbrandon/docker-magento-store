@@ -36,5 +36,5 @@ services:
       - 8080:80
   redis:
     container_name: store_redis
-    image: redis
+    image: redis:alpine
     restart: always
