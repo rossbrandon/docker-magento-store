@@ -1,5 +1,7 @@
 # Docker build for Magento 1 Store
 
+[![](https://images.microbadger.com/badges/image/rossbrandon/magento-store.svg)](https://microbadger.com/images/rossbrandon/magento-store)
+
 [![Docker build](http://dockeri.co/image/rossbrandon/magento-store)](https://hub.docker.com/r/rossbrandon/magento-store/)
 
 Docker build for the custom Magento 1 Store. Github repository: https://github.com/magento-front-door/store.magentocommerce
