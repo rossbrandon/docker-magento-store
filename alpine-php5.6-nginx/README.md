@@ -14,12 +14,12 @@ $ docker-compose up -d
 ~~~
 
 The default `docker-compose.yml` includes the following features:
-* Linux (Alpine Latest)
-* Nginx (Latest)
-* MySQL 5.6
-* PHP 5.6 (with XDebug)
-* phpMyAdmin (Latest)
-* Redis (Alpine)
+* Alpine Linux (alpine:3.4)
+* Nginx (nginx:mainline-alpine)
+* MySQL 5.6 (mysql:5.6)
+* PHP-FPM 5.6 with XDebug (php:5.6-fpm-alpine)
+* phpMyAdmin (phpmyadmin/phpmyadmin)
+* Redis (redis:alpine)
 
 Note: The default `docker-compose.yml` includes `volumes` entries for log files. These log files are not included in this repository and should be created/implemented as needed.
 
@@ -37,6 +37,9 @@ The following packages will be installed onto the web server:
 * php5-ctype
 * mysqli
 * pdo_mysql
+* g++
+* make
+* xdebug
 
 ## Coming Soon
 

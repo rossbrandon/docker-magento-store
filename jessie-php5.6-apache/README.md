@@ -14,12 +14,12 @@ $ docker-compose up -d
 ~~~
 
 The default `docker-compose.yml` includes the following features:
-* Linux (Debian 8 Jessie)
+* Debian Jessie Linux (debian:jessie)
 * Apache 2.4
-* MySQL 5.6
-* PHP 5.6 (with XDebug)
-* phpMyAdmin (Latest)
-* Redis (Latest)
+* MySQL 5.6 (mysql:5.6)
+* PHP 5.6 with XDebug (php:5.6-apache)
+* phpMyAdmin (phpmyadmin/phpmyadmin)
+* Redis (redis:alpine)
 
 Note: The default `docker-compose.yml` includes `volumes` entries for log files. These log files are not included in this repository and should be created/implemented as needed.
 

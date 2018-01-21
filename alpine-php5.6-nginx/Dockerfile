@@ -2,8 +2,7 @@ FROM php:5.6-fpm-alpine
 
 LABEL maintainer="Ross Brandon <rbrandon@magento.com>"
 
-RUN apk update \
-    && apk add --no-cache \
+RUN apk --update add --no-cache \
         pcre-dev \
         php5-iconv \
         php5-soap \
@@ -20,7 +19,8 @@ RUN apk update \
         mysqli \
         pdo_mysql \
     && pecl install xdebug \
-    && docker-php-ext-enable xdebug
+    && docker-php-ext-enable xdebug \
+    && rm -rf /var/cache/apk/*
 
 # Configure directories, files, and permissions
 RUN find /var/www/html/ -type d -exec chmod 700 {} \;
