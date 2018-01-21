@@ -36,6 +36,8 @@ services:
         - ../src:/var/www/html
         - ./etc/local.xml:/var/www/html/app/etc/local.xml
         - ./etc/php.ini:/usr/local/etc/php/conf.d/php.ini
+    env_file:
+      - .env
   phpmyadmin:
     container_name: store_phpmyadmin
     image: phpmyadmin/phpmyadmin
