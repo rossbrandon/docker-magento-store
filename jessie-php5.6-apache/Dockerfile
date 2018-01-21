@@ -2,7 +2,7 @@ FROM php:5.6-apache
 
 LABEL maintainer="Ross Brandon <rbrandon@magento.com>"
 
-# Install needed packages
+# Install packages
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -18,13 +18,9 @@ RUN apt-get update && apt-get install -y \
         mysqli \
         pdo_mysql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install -j$(nproc) gd
-
-# Install XDebug
-RUN yes | pecl install xdebug \
-    && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "xdebug.remote_autostart=off" >> /usr/local/etc/php/conf.d/xdebug.ini
+    && docker-php-ext-install -j$(nproc) gd \
+    && yes | pecl install xdebug \
+    && docker-php-ext-enable xdebug
 
 # Copy files from host to container
 COPY etc/.bashrc /root/.bashrc

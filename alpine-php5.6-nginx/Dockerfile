@@ -2,6 +2,7 @@ FROM php:5.6-fpm-alpine
 
 LABEL maintainer="Ross Brandon <rbrandon@magento.com>"
 
+# Install packages
 RUN apk --update add --no-cache \
         php5-iconv \
         php5-json \
