@@ -1,5 +1,5 @@
 /src
 /db_data
 /sql
-/jessie-php5.6-apache/logs
+/jessie-php5.6-apache/log
 /alpine-php5.6-nginx/rebuild.sh
