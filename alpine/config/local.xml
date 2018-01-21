@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition End User License Agreement
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magento.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Core
+ * @copyright Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license http://www.magento.com/license/enterprise-edition
+ */
+-->
+<config>
+    <global>
+        <session_save>files</session_save>
+        <install>
+            <date><![CDATA[Wed, 17 Jan 2018 19:40:45 +0000]]></date>
+        </install>
+        <crypt>
+            <!--key><![CDATA[ba43cd73c9e03d2580b08d7c9289827c]]></key-->
+            <key></key>
+        </crypt>
+        <disable_local_modules>false</disable_local_modules>
+        <resources>
+            <db>
+                <table_prefix><![CDATA[]]></table_prefix>
+            </db>
+            <default_setup>
+                <connection>
+                    <host><![CDATA[db]]></host>
+                    <username><![CDATA[magento]]></username>
+                    <password><![CDATA[magento]]></password>
+                    <dbname><![CDATA[magento_store]]></dbname>
+                    <active>1</active>
+                </connection>
+            </default_setup>
+            <!--<default_setup>
+                <connection>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[mc_devs]]></username>
+                    <password><![CDATA[tpoUXsKj]]></password>
+                    <dbname><![CDATA[magento_store]]></dbname>
+                    <port>33060</port>
+                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+                    <type><![CDATA[secure_pdo_mysql]]></type>
+                    <secure_driver_options>
+                        <MYSQL_ATTR_SSL_KEY>c:\W\www\mccom.local\store\app\etc\cert\mc-devs.key.pem</MYSQL_ATTR_SSL_KEY>
+                        <MYSQL_ATTR_SSL_CERT>c:\W\www\mccom.local\store\app\etc\cert\mc-devs.cert.pem</MYSQL_ATTR_SSL_CERT>
+                        <MYSQL_ATTR_SSL_CA>c:\W\www\mccom.local\store\app\etc\cert\mc-devs-ca.cer</MYSQL_ATTR_SSL_CA>
+                    </secure_driver_options>
+                    <active>1</active>
+                </connection>
+            </default_setup>-->
+        </resources>
+        <log>
+            <core>
+                <logstash>
+                    <host />
+                    <port />
+                    <protocol />
+                    <current_server />
+                    <current_env />
+                </logstash>
+            </core>
+        </log>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <frontName><![CDATA[backend]]></frontName>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
