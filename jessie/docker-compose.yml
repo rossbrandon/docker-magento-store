@@ -10,7 +10,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./db_data:/var/lib/mysql
+      - ../db_data:/var/lib/mysql
   web:
     container_name: store_web
     image: rossbrandon/magento-store
@@ -18,7 +18,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./src:/var/www/html
+      - ../src:/var/www/html
       - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./config/virtualhost-php56.conf:/etc/apache2/sites-available/001-virtualhost-php56.conf
       - ./logs/56_error.log:/var/www/56_error.log
