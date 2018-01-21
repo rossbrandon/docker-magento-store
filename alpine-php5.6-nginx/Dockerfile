@@ -3,9 +3,7 @@ FROM php:5.6-fpm-alpine
 LABEL maintainer="Ross Brandon <rbrandon@magento.com>"
 
 RUN apk --update add --no-cache \
-        pcre-dev \
         php5-iconv \
-        php5-soap \
         php5-json \
         php5-gd \
         php5-xcache \
@@ -20,6 +18,7 @@ RUN apk --update add --no-cache \
         pdo_mysql \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
+    && apk del autoconf g++ make \
     && rm -rf /var/cache/apk/*
 
 # Configure directories, files, and permissions
