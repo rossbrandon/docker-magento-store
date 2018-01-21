@@ -1,10 +1,10 @@
 # Docker build for Magento 1 Store
 
+[![](https://images.microbadger.com/badges/version/rossbrandon/magento-store:alpine-php5.6-nginx.svg)](https://microbadger.com/images/rossbrandon/magento-store:alpine-php5.6-nginx)
 [![](https://images.microbadger.com/badges/image/rossbrandon/magento-store:alpine-php5.6-nginx.svg)](https://microbadger.com/images/rossbrandon/magento-store:alpine-php5.6-nginx)
 
 [![Docker build](http://dockeri.co/image/rossbrandon/magento-store)](https://hub.docker.com/r/rossbrandon/magento-store/)
 
-Docker build for the custom Magento 1 Store.
 ## Quick start
 
 The easiest way to start Magento Store is using [Docker Compose](https://docs.docker.com/compose/). Clone this repo and run following command in the root directory.
@@ -17,9 +17,11 @@ The default `docker-compose.yml` includes the following features:
 * Linux (Alpine Latest)
 * Nginx (Latest)
 * MySQL 5.6
-* PHP 5.6 (with XDebug TBD)
+* PHP 5.6 (with XDebug)
 * phpMyAdmin (Latest)
 * Redis (Alpine)
+
+Note: The default `docker-compose.yml` includes `volumes` entries for log files. These log files are not included in this repository and should be created/implemented as needed.
 
 ## Installed Packages
 
@@ -35,6 +37,13 @@ The following packages will be installed onto the web server:
 * php5-ctype
 * mysqli
 * pdo_mysql
+
+## Coming Soon
+
+The following functionality is in development:
+
+* SSL support for HTTPS self-signed certificates
+* Localhost mail server (to send Magento application emails)
 
 ## Configuration
 

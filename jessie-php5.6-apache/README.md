@@ -1,10 +1,9 @@
 # Docker build for Magento 1 Store
 
+[![](https://images.microbadger.com/badges/version/rossbrandon/magento-store:jessie-php5.6-apache.svg)](https://microbadger.com/images/rossbrandon/magento-store:jessie-php5.6-apache)
 [![](https://images.microbadger.com/badges/image/rossbrandon/magento-store:jessie-php5.6-apache.svg)](https://microbadger.com/images/rossbrandon/magento-store:jessie-php5.6-apache)
 
 [![Docker build](http://dockeri.co/image/rossbrandon/magento-store)](https://hub.docker.com/r/rossbrandon/magento-store/)
-
-Docker build for the custom Magento 1 Store.
 
 ## Quick start
 
@@ -21,6 +20,8 @@ The default `docker-compose.yml` includes the following features:
 * PHP 5.6 (with XDebug)
 * phpMyAdmin (Latest)
 * Redis (Latest)
+
+Note: The default `docker-compose.yml` includes `volumes` entries for log files. These log files are not included in this repository and should be created/implemented as needed.
 
 ## Installed Packages
 

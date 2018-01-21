@@ -19,8 +19,8 @@ services:
       - db
     volumes:
       - ../src:/var/www/html
-      - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
-      - ./config/virtualhost-php56.conf:/etc/apache2/sites-available/001-virtualhost-php56.conf
+      - ./etc/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./etc/virtualhost-php56.conf:/etc/apache2/sites-available/001-virtualhost-php56.conf
       - ./logs/56_error.log:/var/www/56_error.log
       - ./logs/56_access.log:/var/www/56_access.log
     env_file:

@@ -1,73 +1,30 @@
 # Docker build for Magento 1 Store
 
+[![](https://images.microbadger.com/badges/version/rossbrandon/magento-store.svg)](https://microbadger.com/images/rossbrandon/magento-store)
 [![](https://images.microbadger.com/badges/image/rossbrandon/magento-store.svg)](https://microbadger.com/images/rossbrandon/magento-store)
 
 [![Docker build](http://dockeri.co/image/rossbrandon/magento-store)](https://hub.docker.com/r/rossbrandon/magento-store/)
 
-Docker build for the custom Magento 1 Store. Github repository: https://github.com/magento-front-door/store.magentocommerce
+## Implementations
 
-## Quick start
+This repository serves to provide the following Docker Compose builds:
 
-The easiest way to start Magento Store is using [Docker Compose](https://docs.docker.com/compose/). Clone this repo and run following command in the root directory.
+* [Debian Jessie Linux/PHP5.6/Apache2](https://github.com/rossbrandon/docker-magento-store/tree/master/jessie-php5.6-apache)
+    * [Docker Tags](https://hub.docker.com/r/rossbrandon/magento-store/tags/):
+        * `latest`
+        * `jessie`
+        * `jessie-php5.6-apache`
+* [Alpine Linux/PHP5.6/Nginx](https://github.com/rossbrandon/docker-magento-store/tree/master/alpine-php5.6-nginx)
+    * [Docker Tags](https://hub.docker.com/r/rossbrandon/magento-store/tags/):
+        * `alpine`
+        * `alpine-php5.6-nginx`
 
-~~~
-$ docker-compose up -d
-~~~
+Available Features:
 
-The default `docker-compose.yml` includes the following features:
-* Linux (Debian 8 Jessie)
-* Apache 2.4
+* Linux (Debian 8 Jessie) or Linux (Alpine Latest)
+* Apache 2.4 or Nginx (Latest)
 * MySQL 5.6
 * PHP 5.6 (with XDebug)
 * phpMyAdmin (Latest)
-* Redis (Latest)
+* Redis (Alpine)
 
-## Installed Packages
-
-The following packages will be installed onto the web server:
-
-* libfreetype6-dev
-* libjpeg62-turbo-dev
-* libmcrypt-dev
-* libpng12-dev
-* libcurl3-dev
-* libxml2-dev
-* vim
-* iconv
-* mcrypt
-* mbstring
-* mysql
-* mysqli
-* pdo
-* pdo_mysql
-* gd
-* composer
-* xdebug
-
-## Configuration
-
-Environment configurations are available in the .env file. Below is the default configuration:
-
-~~~
-MYSQL_HOST=db
-MYSQL_ROOT_PASSWORD=123123q
-MYSQL_USER=magento
-MYSQL_PASSWORD=magento
-MYSQL_DATABASE=magento_store
-
-MAGENTO_LOCALE=en_US
-MAGENTO_TIMEZONE=Americas/Chicago
-MAGENTO_DEFAULT_CURRENCY=USD
-MAGENTO_URL=http://local.docker
-
-MAGENTO_ADMIN_FIRSTNAME=Admin
-MAGENTO_ADMIN_LASTNAME=Admin
-MAGENTO_ADMIN_EMAIL=admin@example.com
-MAGENTO_ADMIN_USERNAME=admin
-MAGENTO_ADMIN_PASSWORD=123123q
-
-DB_HOST=db:3306
-DB_PASSWORD=123123q
-
-XDEBUG_CONFIG: remote_host={{YourHostIP}}
-~~~
