@@ -11,6 +11,7 @@ RUN apk --update add --no-cache \
         php5-curl \
         php5-ctype \
         php5-mcrypt \
+        ssmtp \
         autoconf \
         g++ \
         make \

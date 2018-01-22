@@ -17,12 +17,15 @@ services:
     restart: always
     depends_on:
       - db
+      - redis
+      - mail
     volumes:
       - ../code/backend:/var/www/html
+      - ./etc/modules/Cm_RedisSession.xml:/var/www/html/app/etc/modules/Cm_RedisSession.xml
+      - ./etc/local.xml:/var/www/html/app/etc/local.xml
       - ./etc/php.ini:/usr/local/etc/php/conf.d/php.ini
-      - ./etc/virtualhost-php56.conf:/etc/apache2/sites-available/001-virtualhost-php56.conf
-      - ./logs/56_error.log:/var/www/56_error.log
-      - ./logs/56_access.log:/var/www/56_access.log
+      - ./log/56_error.log:/var/www/56_error.log
+      - ./log/56_access.log:/var/www/56_access.log
     env_file:
       - .env
     ports:
@@ -38,3 +41,10 @@ services:
     container_name: store_redis
     image: redis:alpine
     restart: always
+    ports:
+      - 6379:6379
+  mail:
+    container_name: store_mail
+    image: djfarrelly/maildev
+    ports:
+      - 8081:80

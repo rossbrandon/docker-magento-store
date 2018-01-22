@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
         libpng12-dev \
         libcurl3-dev \
         libxml2-dev \
+        ssmtp \
         vim \
     && docker-php-ext-install -j$(nproc) \
         iconv \
@@ -24,9 +25,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copy files from host to container
 COPY etc/.bashrc /root/.bashrc
-COPY etc/php.ini /usr/local/etc/php/conf.d/php.ini
 COPY etc/virtualhost-php56.conf /etc/apache2/sites-available/001-virtualhost-php56.conf
-COPY etc/local.xml /var/www/html/app/etc/local.xml
 
 # Enable Apache
 RUN a2enmod rewrite headers

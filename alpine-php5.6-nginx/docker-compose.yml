@@ -16,9 +16,9 @@ services:
     image: nginx:mainline-alpine
     depends_on:
       - php
-      - db
     volumes:
         - ../code/backend:/var/www/html
+        - ./etc/modules/Cm_RedisSession.xml:/var/www/html/app/etc/modules/Cm_RedisSession.xml
         - ./etc/local.xml:/var/www/html/app/etc/local.xml
         - ./etc/default.conf:/etc/nginx/conf.d/default.conf
         - ./log/access.log:/var/log/access.log
@@ -32,8 +32,11 @@ services:
     image: rossbrandon/magento-store:alpine-php5.6-nginx
     depends_on:
       - db
+      - redis
+      - mail
     volumes:
         - ../code/backend:/var/www/html
+        - ./etc/modules/Cm_RedisSession.xml:/var/www/html/app/etc/modules/Cm_RedisSession.xml
         - ./etc/local.xml:/var/www/html/app/etc/local.xml
         - ./etc/php.ini:/usr/local/etc/php/conf.d/php.ini
     env_file:
@@ -49,3 +52,10 @@ services:
     container_name: store_redis
     image: redis:alpine
     restart: always
+    ports:
+      - 6379:6379
+  mail:
+    container_name: store_mail
+    image: djfarrelly/maildev
+    ports:
+      - 8081:80
