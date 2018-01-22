@@ -24,6 +24,7 @@ services:
       - ./etc/modules/Cm_RedisSession.xml:/var/www/html/app/etc/modules/Cm_RedisSession.xml
       - ./etc/local.xml:/var/www/html/app/etc/local.xml
       - ./etc/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./etc/apache2.conf:/etc/apache2/apache2.conf
       - ./log/56_error.log:/var/www/56_error.log
       - ./log/56_access.log:/var/www/56_access.log
     env_file:

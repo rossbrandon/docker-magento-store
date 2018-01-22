@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
         pdo_mysql \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
-    && yes | pecl install xdebug \
+    && yes | pecl install xdebug oauth-1.2.3 \
     && docker-php-ext-enable xdebug
 
 # Copy files from host to container
