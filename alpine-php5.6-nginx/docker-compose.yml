@@ -21,6 +21,7 @@ services:
         - ./etc/modules/Cm_RedisSession.xml:/var/www/html/app/etc/modules/Cm_RedisSession.xml
         - ./etc/local.xml:/var/www/html/app/etc/local.xml
         - ./etc/default.conf:/etc/nginx/conf.d/default.conf
+        - ./etc/www.conf:/etc/php-fpm.d/www.conf
         - ./log/access.log:/var/log/access.log
         - ./log/error.log:/var/log/error.log
     env_file:

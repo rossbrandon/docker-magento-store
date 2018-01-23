@@ -4,18 +4,18 @@ LABEL maintainer="Ross Brandon <rbrandon@magento.com>"
 
 # Install packages
 RUN apk --update add --no-cache \
-        php5-iconv \
         php5-json \
-        php5-gd \
-        php5-xcache \
         php5-curl \
         php5-ctype \
-        php5-mcrypt \
+        libmcrypt-dev \
         ssmtp \
         autoconf \
         g++ \
         make \
-    && docker-php-ext-install \
+    && docker-php-ext-install -j$(getconf _NPROCESSORS_ONLN) \
+        iconv \
+        mcrypt \
+        mbstring \
         mysqli \
         pdo_mysql \
     && pecl install xdebug oauth-1.2.3 \

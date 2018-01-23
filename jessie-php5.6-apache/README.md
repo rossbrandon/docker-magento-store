@@ -20,6 +20,7 @@ The default `docker-compose.yml` includes the following features:
 * PHP 5.6 with XDebug (php:5.6-apache)
 * phpMyAdmin (phpmyadmin/phpmyadmin)
 * Redis (redis:alpine)
+* Maildev (latest)
 
 Note: The default `docker-compose.yml` includes `volumes` entries for log files. These log files are not included in this repository and should be created/implemented as needed.
 
@@ -37,13 +38,18 @@ The following packages will be installed onto the web server:
 * iconv
 * mcrypt
 * mbstring
-* mysql
 * mysqli
-* pdo
 * pdo_mysql
 * gd
-* composer
+* ssmtp
 * xdebug
+* oauth-1.2.3
+
+## Coming Soon
+
+The following functionality is in development:
+
+* SSL support for HTTPS self-signed certificates
 
 ## Configuration
 
@@ -55,20 +61,6 @@ MYSQL_ROOT_PASSWORD=123123q
 MYSQL_USER=magento
 MYSQL_PASSWORD=magento
 MYSQL_DATABASE=magento_store
-
-MAGENTO_LOCALE=en_US
-MAGENTO_TIMEZONE=Americas/Chicago
-MAGENTO_DEFAULT_CURRENCY=USD
-MAGENTO_URL=http://local.docker
-
-MAGENTO_ADMIN_FIRSTNAME=Admin
-MAGENTO_ADMIN_LASTNAME=Admin
-MAGENTO_ADMIN_EMAIL=admin@example.com
-MAGENTO_ADMIN_USERNAME=admin
-MAGENTO_ADMIN_PASSWORD=123123q
-
-DB_HOST=db:3306
-DB_PASSWORD=123123q
 
 XDEBUG_CONFIG: remote_host={{YourHostIP}}
 ~~~

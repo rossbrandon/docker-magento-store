@@ -20,6 +20,7 @@ The default `docker-compose.yml` includes the following features:
 * PHP-FPM 5.6 with XDebug (php:5.6-fpm-alpine)
 * phpMyAdmin (phpmyadmin/phpmyadmin)
 * Redis (redis:alpine)
+* Maildev (latest)
 
 Note: The default `docker-compose.yml` includes `volumes` entries for log files. These log files are not included in this repository and should be created/implemented as needed.
 
@@ -27,26 +28,24 @@ Note: The default `docker-compose.yml` includes `volumes` entries for log files.
 
 The following packages will be installed onto the web server:
 
-* php5-iconv
-* php5-mcrypt
 * php5-curl
 * php5-json
-* php5-soap
-* php5-gd
-* php5-xcache
 * php5-ctype
 * mysqli
 * pdo_mysql
-* g++
-* make
+* libmcrypt-dev
+* ssmtp
+* iconv
+* mcrypt
+* mbstring
 * xdebug
+* oauth-1.2.3
 
 ## Coming Soon
 
 The following functionality is in development:
 
 * SSL support for HTTPS self-signed certificates
-* Localhost mail server (to send Magento application emails)
 
 ## Configuration
 
