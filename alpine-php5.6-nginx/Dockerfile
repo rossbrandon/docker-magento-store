@@ -7,6 +7,7 @@ RUN apk --update add --no-cache \
         php5-json \
         php5-curl \
         php5-ctype \
+        libxml2-dev \
         libmcrypt-dev \
         ssmtp \
         autoconf \
@@ -18,6 +19,7 @@ RUN apk --update add --no-cache \
         mbstring \
         mysqli \
         pdo_mysql \
+        soap \
     && pecl install xdebug oauth-1.2.3 \
     && docker-php-ext-enable xdebug \
     && apk del autoconf g++ make \

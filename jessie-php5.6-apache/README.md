@@ -40,6 +40,7 @@ The following packages will be installed onto the web server:
 * mbstring
 * mysqli
 * pdo_mysql
+* soap
 * gd
 * ssmtp
 * xdebug

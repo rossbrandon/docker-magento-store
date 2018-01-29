@@ -33,6 +33,8 @@ The following packages will be installed onto the web server:
 * php5-ctype
 * mysqli
 * pdo_mysql
+* soap
+* libxml2-dev
 * libmcrypt-dev
 * ssmtp
 * iconv
