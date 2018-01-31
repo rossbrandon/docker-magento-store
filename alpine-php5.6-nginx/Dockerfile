@@ -20,7 +20,9 @@ RUN apk --update add --no-cache \
         mysqli \
         pdo_mysql \
         soap \
-    && pecl install xdebug oauth-1.2.3 \
+    && pecl install \
+        xdebug-2.5.0 \
+        oauth-1.2.3 \
     && docker-php-ext-enable xdebug \
     && apk del autoconf g++ make \
     && rm -rf /var/cache/apk/*

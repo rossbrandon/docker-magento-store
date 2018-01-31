@@ -40,7 +40,7 @@ The following packages will be installed onto the web server:
 * iconv
 * mcrypt
 * mbstring
-* xdebug
+* xdebug-2.5.0
 * oauth-1.2.3
 
 ## Coming Soon
