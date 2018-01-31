@@ -62,6 +62,4 @@ MYSQL_ROOT_PASSWORD=123123q
 MYSQL_USER=magento
 MYSQL_PASSWORD=magento
 MYSQL_DATABASE=magento_store
-
-XDEBUG_CONFIG: remote_host={{YourHostIP}}
 ~~~
