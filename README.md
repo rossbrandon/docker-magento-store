@@ -9,13 +9,13 @@
 
 This repository serves to provide the following Docker Compose builds:
 
-* [Debian Jessie Linux/PHP5.6/Apache2](https://github.com/rossbrandon/docker-magento-store/tree/master/jessie-php5.6-apache)
-    * [Docker Tags](https://hub.docker.com/r/rossbrandon/magento-store/tags/):
-        * `latest`
-        * `jessie-php5.6-apache`
 * [Alpine Linux/PHP5.6/Nginx](https://github.com/rossbrandon/docker-magento-store/tree/master/alpine-php5.6-nginx)
     * [Docker Tags](https://hub.docker.com/r/rossbrandon/magento-store/tags/):
+        * `latest`
         * `alpine-php5.6-nginx`
+* [Debian Jessie Linux/PHP5.6/Apache2](https://github.com/rossbrandon/docker-magento-store/tree/master/jessie-php5.6-apache)
+    * [Docker Tags](https://hub.docker.com/r/rossbrandon/magento-store/tags/):
+        * `jessie-php5.6-apache`
 
 Available Features:
 
