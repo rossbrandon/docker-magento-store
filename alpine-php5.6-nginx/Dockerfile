@@ -23,8 +23,12 @@ RUN apk --update add --no-cache \
     && pecl install \
         xdebug-2.5.0 \
         oauth-1.2.3 \
-    && docker-php-ext-enable xdebug \
-    && apk del autoconf g++ make \
+    && docker-php-ext-enable \
+        xdebug \
+    && apk del \
+        autoconf \
+        g++ \
+        make \
     && rm -rf /var/cache/apk/*
 
 # Configure directories, files, and permissions

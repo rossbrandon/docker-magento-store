@@ -32,6 +32,14 @@ services:
       - .env
     ports:
       - 80:80
+    extra_hosts:
+      - "docker.local:10.254.254.254"
+  redis:
+    container_name: store_redis
+    image: redis:alpine
+    restart: always
+    ports:
+      - 6379:6379
   phpmyadmin:
     container_name: store_phpmyadmin
     image: phpmyadmin/phpmyadmin
@@ -39,12 +47,6 @@ services:
       - db
     ports:
       - 8080:80
-  redis:
-    container_name: store_redis
-    image: redis:alpine
-    restart: always
-    ports:
-      - 6379:6379
   mail:
     container_name: store_mail
     image: djfarrelly/maildev

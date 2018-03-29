@@ -60,3 +60,19 @@ MYSQL_USER=magento
 MYSQL_PASSWORD=magento
 MYSQL_DATABASE=magento_store
 ~~~
+
+## Working with Docker for Mac (WIP)
+
+Docker for Mac has known performance issues in working with the host filesystem. To alieviate this, use [docker-sync](https://github.com/EugenMayer/docker-sync). An example docker-sync.yml file is included.
+
+To start the Magento Store with docker-sync, execute the following command:
+
+~~~
+$ docker-sync-stack start
+~~~
+
+To stop the Magento store, execute:
+
+~~~
+$ docker-sync-stack clean
+~~~
